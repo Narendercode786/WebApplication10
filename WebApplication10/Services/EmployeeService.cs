@@ -14,7 +14,7 @@ namespace WebApplication10.Services
         }
         private SqlConnection GetSqlConnection()
         {
-            return new SqlConnection(this.configuration.GetConnectionString("SQLConnection"));
+            return new SqlConnection(this.configuration["SQLConnection"]);
         }
         public IEnumerable<Employee> GetEmployees()
         {
